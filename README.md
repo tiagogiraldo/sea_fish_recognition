@@ -1,6 +1,6 @@
 # sea_fish_recognition
 
-![Grouper](https://github.com/tiagogiraldo/sea_fish_recognition/grouper.JPG)
+![Grouper](https://github.com/tiagogiraldo/sea_fish_recognition/blob/master/grouper.JPG)
 
 
 Fish recognition API
