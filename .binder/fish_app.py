@@ -19,7 +19,7 @@ st.markdown(introduction_str)
 
 
 # Loading Model
-path = Path()
+path = Path(".")
 #@st.cache(persist=True)
 fish_classifier = load_learner(path/'fish_classification.pkl')
 
