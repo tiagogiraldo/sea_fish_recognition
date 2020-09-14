@@ -57,7 +57,7 @@ mistune==0.8.4            # via nbconvert
 multidict==4.7.6          # via aiohttp, yarl
 murmurhash==1.0.2         # via preshed, spacy, thinc
 nbclient==0.5.0           # via nbconvert
-nbconvert==6.0.2          # via notebook
+nbconvert==6.0.2          # via -r -, notebook
 nbformat==5.0.7           # via ipywidgets, nbclient, nbconvert, notebook
 nest-asyncio==1.4.0       # via nbclient
 notebook==6.1.4           # via jupyter-server-proxy, widgetsnbextension
