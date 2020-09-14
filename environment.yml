@@ -12,6 +12,6 @@ dependencies:
     - json5==0.9.5
     - jsonpickle==1.4.1
     - pickleshare==0.7.5    
-    - torch==1.6.0+cu101
-    - torchvision==0.7.0+cu101       
+    - torch==1.6.0
+    - torchvision==0.7.0
     - fastai==2.0.10
