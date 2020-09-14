@@ -1,0 +1,17 @@
+name: fish-environment
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7.9=h7579374_0
+  - numpy=1.18.5=py37h6ebd63d_5  
+  - pip
+  - pip:
+    - streamlit==0.66.0    
+    - pillow==7.2.0
+    - json5==0.9.5
+    - jsonpickle==1.4.1
+    - pickleshare==0.7.5    
+    - torch==1.6.0+cu101
+    - torchvision==0.7.0+cu101       
+    - fastai==2.0.10
