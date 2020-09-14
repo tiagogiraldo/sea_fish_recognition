@@ -1,10 +1,12 @@
-name: fish-environment
+name: fish_env
 channels:
   - conda-forge
 dependencies:
   - python=3.7.9
   - numpy=1.18.5
   - pip
+  - nbconvert
+  - jupyter-server-proxy  
   - pip:
     - streamlit==0.66.0    
     - pillow==7.2.0
@@ -14,5 +16,3 @@ dependencies:
     - torch @ https://download.pytorch.org/whl/cpu/torch-1.6.0%2Bcpu-cp37-cp37m-linux_x86_64.whl
     - torchvision @ https://download.pytorch.org/whl/cpu/torchvision-0.7.0%2Bcpu-cp37-cp37m-linux_x86_64.whl
     - fastai==2.0.10
-    - nbconvert
-    - jupyter-server-proxy
