@@ -1,7 +1,6 @@
 # enable nbserverproxy
 
-# jupyter serverextension enable --sys-prefix nbserverproxy
-jupyter serverextension enable --sys-prefix jupyter_server_proxy
+#jupyter serverextension enable --sys-prefix jupyter_server_proxy
 
 # streamlit launches at startup
 mv .binder/streamlit_call.py ${NB_PYTHON_PREFIX}/lib/python*/site-packages/
