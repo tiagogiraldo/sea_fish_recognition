@@ -10,6 +10,5 @@ def load_jupyter_server_extension(nbapp):
             "fish_app.py", 
             "--browser.serverAddress=0.0.0.0", 
             "--server.enableCORS=False",
-            "--runner.fixMatplotlib=True"
         ]
     )
