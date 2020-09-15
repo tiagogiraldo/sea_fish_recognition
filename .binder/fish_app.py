@@ -21,18 +21,18 @@ st.markdown(introduction_str)
 # Loading Model
 
 @st.cache(persist=True)
-fish_classifier = load_learner(Path('fish_classification.pkl'))
+fish_classifier = load_learner(Path('~/fish_classification.pkl'))
 
 
 # load Wikipedia dictionaries info
 @st.cache(persist=True)
-with open(Path('name_dict.json')) as file1:
+with open(Path('~/name_dict.json')) as file1:
     name_dict= json.load(file1)
 @st.cache(persist=True)    
-with open(Path('fish_summaries.json')) as file2:
+with open(Path('~/fish_summaries.json')) as file2:
     fish_summaries= json.load(file2)        
 @st.cache(persist=True)    
-with open(Path('url_dict.json')) as file3:
+with open(Path('~/url_dict.json')) as file3:
     url_dict= json.load(file3)
     
 
