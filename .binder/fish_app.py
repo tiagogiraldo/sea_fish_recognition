@@ -3,7 +3,7 @@ import torch
 from fastai.vision.all import *
 import streamlit as st
 from PIL import Image
-import pathlib 
+from pathlib import Path
 import json
 
 
@@ -17,26 +17,22 @@ introduction_str = 'This is a sea fish classifier.  It was made with 44,134 imag
 
 st.markdown(introduction_str)
 
-# Define paths.
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
-PATH_MODEL = pathlib.Path(os.path.join(dir_path, 'model'))
 
 # Loading Model
 
-#@st.cache(persist=True)
-fish_classifier = load_learner(PATH_DATA/'fish_classification.pkl')
+@st.cache(persist=True)
+fish_classifier = load_learner(Path(".",'fish_classification.pkl'))
 
 
 # load Wikipedia dictionaries info
-
-with open(PATH_DATA/'name_dict.json') as file1:
+@st.cache(persist=True)
+with open(Path(".",'name_dict.json')) as file1:
     name_dict= json.load(file1)
-    
-with open(PATH_DATA/'fish_summaries.json') as file2:
+@st.cache(persist=True)    
+with open(Path(".",'fish_summaries.json')) as file2:
     fish_summaries= json.load(file2)        
-    
-with open(PATH_DATA/'url_dict.json') as file3:
+@st.cache(persist=True)    
+with open(Path(".",'url_dict.json')) as file3:
     url_dict= json.load(file3)
     
 
