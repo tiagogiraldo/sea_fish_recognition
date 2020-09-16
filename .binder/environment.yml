@@ -2,14 +2,11 @@ name: dl
 channels:
   - conda-forge
 dependencies:
-  - python
+  - python=3.7.9
   - numpy
   - pip
   - pandas
   - jupyter-server-proxy
+  - fastai==2.0.10 
   - pip:
     - streamlit
-    - torch
-    - torchvision
-    - fastai
-
