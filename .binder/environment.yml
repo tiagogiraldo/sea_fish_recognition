@@ -1,0 +1,15 @@
+name: dl
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - pip
+  - pandas
+  - jupyter-server-proxy
+  - torch
+  - torchvision
+  - fastai
+  - pip:
+    - streamlit
+
