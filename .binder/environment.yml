@@ -9,6 +9,6 @@ dependencies:
   - jupyter-server-proxy
   - pytorch 
   - torchvision
-  - fastai
   - pip:
     - streamlit
+    - fastai
