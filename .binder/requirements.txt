@@ -1,6 +1,0 @@
-streamlit==0.66.0         
-jupyter-server-proxy==1.2.0
-nbserverproxy==0.8.8
-torch==1.6.0              
-torchvision==0.7.0        
-fastai==2.0.10            
