@@ -7,9 +7,9 @@ dependencies:
   - pip
   - pandas
   - jupyter-server-proxy
-  - torch
-  - torchvision
-  - fastai
   - pip:
     - streamlit
+    - torch
+    - torchvision
+    - fastai
 
