@@ -44,6 +44,7 @@ file_up = st.file_uploader(
 
 
 if file_up: 
+    print('file was upload')
     image = Image.open(file_up)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
 
