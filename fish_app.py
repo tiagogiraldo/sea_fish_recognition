@@ -32,7 +32,7 @@ with open(Path("..",'name_dict.json')) as file1:
 with open(Path("..",'fish_summaries.json')) as file2:
     fish_summaries= json.load(file2)        
     
-with open(Path(".."'url_dict.json')) as file3:
+with open(Path("..",'url_dict.json')) as file3:
     url_dict= json.load(file3)
     
 
