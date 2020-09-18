@@ -43,15 +43,17 @@ with open(Path(".",'url_dict.json')) as file3:
 
 # Loading File to classify
 st.markdown("display load image")
-file_up = st.file_uploader(
-    "Upload an image", 
-    type=['png', 'jpg', 'jpeg'])
+#file_up = st.file_uploader(
+#    "Upload an image", 
+#    type=['png', 'jpg', 'jpeg'])
 
-print(file_up)
+file_up = widgets.FileUpload()
+
 
 if file_up is not None: 
     st.markdown('file was upload')
-    image = Image.open(file_up)
+    imgage = PILImage.create(btn_upload.data[-1])    
+    #image = Image.open(file_up)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
 
     #fish_classifier = torch.load('fish_classification.pkl')
