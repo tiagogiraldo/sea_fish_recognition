@@ -42,13 +42,14 @@ with open(Path(".",'url_dict.json')) as file3:
     
 
 # Loading File to classify
-st.markdown("load image")
+st.markdown("display load image")
 file_up = st.file_uploader(
     "Upload an image", 
     type=['png', 'jpg', 'jpeg'])
 
 
-if file_up: 
+
+if file_up is not None: 
     st.markdown('file was upload')
     image = Image.open(file_up)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
