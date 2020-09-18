@@ -1,7 +1,6 @@
 #from fastai2.vision.all import open_image, load_learner, image, torch
 import torch
 from fastai.vision.all import *
-from fastai.vision.widgets import *
 import streamlit as st
 from PIL import Image
 from pathlib import Path
@@ -18,16 +17,9 @@ introduction_str = 'This is a sea fish classifier.  It was made with 44,134 imag
 
 st.markdown(introduction_str)
 
-st.markdown("Loading Model")
 # Loading Model
-#path = Path(".")
-#@st.cache(persist=True)
-#fish_classifier = load_learner(Path(".",'fish_classification.pkl'))
 path_file = Path('.','fish_classification.pkl')
-def call_pkl(path_file):
-    return load_learner(path_file)
-
-fish_classifier = call_pkl(path_file)
+fish_classifier = load_learner(path_file)
 
 
 # load Wikipedia dictionaries info
