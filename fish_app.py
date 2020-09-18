@@ -17,7 +17,7 @@ introduction_str = 'This is a sea fish classifier.  It was made with 44,134 imag
 
 st.markdown(introduction_str)
 
-print("Loading Model")
+st.markdown("Loading Model")
 # Loading Model
 #path = Path(".")
 #@st.cache(persist=True)
@@ -25,26 +25,26 @@ fish_classifier = load_learner(Path(".",'fish_classification.pkl'))
 
 
 # load Wikipedia dictionaries info
-print("Loading names dictionary")
+st.markdown("Loading names dictionary")
 with open(Path(".",'name_dict.json')) as file1:
     name_dict= json.load(file1)
-print("Loading summaries dictionary")    
+st.markdown("Loading summaries dictionary")    
 with open(Path(".",'fish_summaries.json')) as file2:
     fish_summaries= json.load(file2)        
-print("Loading url dictionary")    
+st.markdown("Loading url dictionary")    
 with open(Path(".",'url_dict.json')) as file3:
     url_dict= json.load(file3)
     
 
 # Loading File to classify
-print("load image")
+st.markdown("load image")
 file_up = st.file_uploader(
     "Upload an image", 
     type=['png', 'jpg', 'jpeg'])
 
 
 if file_up: 
-    print('file was upload')
+    st.markdown('file was upload')
     image = Image.open(file_up)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
 
