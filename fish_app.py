@@ -21,7 +21,12 @@ st.markdown("Loading Model")
 # Loading Model
 #path = Path(".")
 #@st.cache(persist=True)
-fish_classifier = load_learner(Path(".",'fish_classification.pkl'))
+#fish_classifier = load_learner(Path(".",'fish_classification.pkl'))
+path_file = Path('.','fish_classification.pkl')
+def call_pkl(path_file):
+    return load_learner(path_file)
+
+fish_classifier = call_pkl(path_file)
 
 
 # load Wikipedia dictionaries info
