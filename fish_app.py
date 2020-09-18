@@ -47,7 +47,7 @@ file_up = st.file_uploader(
     "Upload an image", 
     type=['png', 'jpg', 'jpeg'])
 
-
+print(file_up)
 
 if file_up is not None: 
     st.markdown('file was upload')
