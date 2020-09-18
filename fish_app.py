@@ -31,29 +31,25 @@ fish_classifier = call_pkl(path_file)
 
 
 # load Wikipedia dictionaries info
-st.markdown("Loading names dictionary")
+
 with open(Path(".",'name_dict.json')) as file1:
     name_dict= json.load(file1)
-st.markdown("Loading summaries dictionary")    
+
 with open(Path(".",'fish_summaries.json')) as file2:
     fish_summaries= json.load(file2)        
-st.markdown("Loading url dictionary")    
+
 with open(Path(".",'url_dict.json')) as file3:
     url_dict= json.load(file3)
     
 
 # Loading File to classify
-st.markdown("display load image")
-#file_up = st.file_uploader(
-#    "Upload an image", 
-#    type=['png', 'jpg', 'jpeg'])
 
-file_up = widgets.FileUpload()
-
+file_up = st.file_uploader(
+    "Upload an image", 
+    type=['png', 'jpg', 'jpeg'])
 
 if file_up is not None: 
-    st.markdown('file was upload')
-    #imgage = PILImage.create(btn_upload.data[-1])    
+    st.markdown('file was upload') 
     image = Image.open(file_up)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
 
