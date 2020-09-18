@@ -53,8 +53,8 @@ file_up = widgets.FileUpload()
 
 if file_up is not None: 
     st.markdown('file was upload')
-    imgage = PILImage.create(btn_upload.data[-1])    
-    #image = Image.open(file_up)
+    #imgage = PILImage.create(btn_upload.data[-1])    
+    image = Image.open(file_up)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
 
     #fish_classifier = torch.load('fish_classification.pkl')
