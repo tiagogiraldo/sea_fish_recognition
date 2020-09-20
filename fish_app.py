@@ -40,34 +40,34 @@ file_up = st.file_uploader(
     "Upload an image", 
     type=['png', 'jpg', 'jpeg'])
 
-try:
-    image = Image.open(file_up)
-    st.image(image, caption='Uploaded Image.', use_column_width=True)
-except:
-    st.write("No files upload")
-
-
-
-
-#if file_up is not None: 
+#try:
 #    image = Image.open(file_up)
 #    st.image(image, caption='Uploaded Image.', use_column_width=True)
-#
-#    #fish_classifier = torch.load('fish_classification.pkl')
-#    image = PILImage.create(file_up)
-#    pred,pred_idx,probs = fish_classifier.predict(image)
-#
-#    st.subheader("Fish Specie Prediction")
-#    out_label = f'Prediction: {name_dict[pred]};\n\n Probability: {probs[pred_idx]:.03f}'
-#
-#    st.write(out_label)
-#    st.markdown("\n\n")
-#    st.subheader("Wikipedia Information About Classified Fish")
-#    st.markdown("\n")
-#    st.write(fish_summaries[pred])
-#    st.markdown("\n")
-#    out_url = f"Wikipedia url source: {url_dict[pred]}"
-#    st.write(out_url)
+#except:
+#    st.write("No files upload")
+
+
+
+
+if file_up is not None: 
+    image = Image.open(file_up)
+    st.image(image, caption='Uploaded Image.', use_column_width=True)
+
+    #fish_classifier = torch.load('fish_classification.pkl')
+    image = PILImage.create(file_up)
+    pred,pred_idx,probs = fish_classifier.predict(image)
+
+    st.subheader("Fish Specie Prediction")
+    out_label = f'Prediction: {name_dict[pred]};\n\n Probability: {probs[pred_idx]:.03f}'
+
+    st.write(out_label)
+    st.markdown("\n\n")
+    st.subheader("Wikipedia Information About Classified Fish")
+    st.markdown("\n")
+    st.write(fish_summaries[pred])
+    st.markdown("\n")
+    out_url = f"Wikipedia url source: {url_dict[pred]}"
+    st.write(out_url)
  
  
 
