@@ -10,5 +10,5 @@ dependencies:
   - pytorch 
   - torchvision
   - pip:
-    - streamlit==0.66.0 
+    - streamlit 
     - fastai==2.0.10 
